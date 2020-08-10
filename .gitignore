@@ -1,4 +1,8 @@
+# macOS
 .DS_Store
+
+# Env file
+dev\ for\ reddit/env.plist
 
 # Pods
 Pods/

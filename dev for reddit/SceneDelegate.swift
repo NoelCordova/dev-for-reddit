@@ -21,6 +21,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         // swiftlint:disable:previous unused_optional_binding
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        if UserDefaults.standard.string(forKey: K.UD_TOKEN) != nil {
+            let mainNavController = storyboard.instantiateViewController(identifier: "MainNavController")
+            window?.rootViewController = mainNavController
+        } else {
+            let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavController")
+            window?.rootViewController = loginNavController
+        }
+    }
+
+    // swiftlint:disable:next identifier_name
+    func changeRootViewController(_ vc: UIViewController, animated: Bool) {
+        // Custom method
+        // Use this method to change the root navigation controller
+        if let window = self.window {
+            window.rootViewController = vc
+
+            if animated {
+                UIView.transition(
+                    with: window,
+                    duration: 0.5,
+                    options: [.transitionFlipFromLeft],
+                    animations: nil,
+                    completion: nil)
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
