@@ -51,11 +51,18 @@
                                     <constraint firstAttribute="width" constant="250" id="sA0-DV-uaz"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOKEN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enI-HM-48o">
+                                <rect key="frame" x="183.66666666666666" y="63.999999999999993" width="47" height="18.666666666666664"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="enI-HM-48o" firstAttribute="top" secondItem="gYF-O4-ZmF" secondAttribute="top" constant="20" id="0nZ-hz-S8n"/>
                             <constraint firstItem="QTa-aH-QWa" firstAttribute="centerX" secondItem="e8b-yB-AET" secondAttribute="centerX" id="gxk-zj-A7s"/>
                             <constraint firstItem="QTa-aH-QWa" firstAttribute="centerY" secondItem="e8b-yB-AET" secondAttribute="centerY" id="i2I-4j-jRp"/>
+                            <constraint firstItem="enI-HM-48o" firstAttribute="centerX" secondItem="e8b-yB-AET" secondAttribute="centerX" id="rcm-gM-HRP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gYF-O4-ZmF"/>
                     </view>
@@ -68,6 +75,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="profileImageView" destination="QTa-aH-QWa" id="3zs-ul-orN"/>
+                        <outlet property="tokenTextField" destination="enI-HM-48o" id="Kuo-GO-hbK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZC2-xb-vCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController2: UIViewController {
 
+    @IBOutlet weak var tokenTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
 
     var oauthManager = OAuthManager()
@@ -62,6 +63,7 @@ extension ViewController2: RedditManagerDelegate {
     func didUpdateUser(_ redditManager: RedditManager, user: UserModel) {
         DispatchQueue.main.async {
             self.title = user.name
+            self.tokenTextField.text = UserDefaults.standard.string(forKey: K.UD_TOKEN)!
 
             let url = URL(string: user.icon_img)
             let data = try? Data(contentsOf: url!)
