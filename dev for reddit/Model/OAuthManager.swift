@@ -37,6 +37,8 @@ struct OAuthManager {
     private let reddit_access_token_url = "/access_token"
     private let reddit_revoke_token_url = "/revoke_token"
 
+    private let scopes = ["read", "identity", "mysubreddits"]
+
     func createNewSessionURL() -> URL? {
         let urlString = "\(reddit_url)\(reddit_authorize_url)"
         let state = UUID().uuidString
@@ -49,7 +51,7 @@ struct OAuthManager {
             URLQueryItem(name: "state", value: state),
             URLQueryItem(name: "redirect_uri", value: K.REDIRECT_URI),
             URLQueryItem(name: "duration", value: "permanent"),
-            URLQueryItem(name: "scope", value: "read identity")
+            URLQueryItem(name: "scope", value: scopes.joined(separator: " "))
         ]
 
         var url = URLComponents(string: urlString)!
