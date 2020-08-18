@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  dev for reddit
 //
 //  Created by Noel Espino Córdova on 03/08/20.
@@ -9,7 +9,7 @@
 import UIKit
 import AuthenticationServices
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     var aouthManager = OAuthManager()
     var authSession: ASWebAuthenticationSession?
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
 // MARK: - ASWebAuthenticationPresentationContextProviding
 
-extension ViewController: ASWebAuthenticationPresentationContextProviding {
+extension LoginViewController: ASWebAuthenticationPresentationContextProviding {
 
     @IBAction func logInPressed(_ sender: UIButton) {
         let url = aouthManager.createNewSessionURL()
@@ -47,7 +47,7 @@ extension ViewController: ASWebAuthenticationPresentationContextProviding {
 
 // MARK: - OAuthManagerDelegate
 
-extension ViewController: OAuthManagerDelegate {
+extension LoginViewController: OAuthManagerDelegate {
 
     func didReciveToken(_ oauthManager: OAuthManager) {
         DispatchQueue.main.async {

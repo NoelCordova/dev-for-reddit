@@ -11,9 +11,11 @@
 		9736088024D89D4B006FAE86 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736087F24D89D4B006FAE86 /* WebKit.framework */; };
 		976D87DB24E0B4CC009A8F6A /* SharedMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976D87DA24E0B4CC009A8F6A /* SharedMethods.swift */; };
 		976D87DF24E0C242009A8F6A /* env demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 976D87DE24E0C242009A8F6A /* env demo.plist */; };
+		9778091B24EC671D000B3A94 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778091A24EC671D000B3A94 /* PostData.swift */; };
+		9778091D24EC6A2E000B3A94 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778091C24EC6A2E000B3A94 /* PostModel.swift */; };
 		9794A02424D84CAA00C3F21C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794A02324D84CAA00C3F21C /* AppDelegate.swift */; };
 		9794A02624D84CAA00C3F21C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794A02524D84CAA00C3F21C /* SceneDelegate.swift */; };
-		9794A02824D84CAA00C3F21C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794A02724D84CAA00C3F21C /* ViewController.swift */; };
+		9794A02824D84CAA00C3F21C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794A02724D84CAA00C3F21C /* LoginViewController.swift */; };
 		9794A02B24D84CAA00C3F21C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9794A02924D84CAA00C3F21C /* Main.storyboard */; };
 		9794A02D24D84CAB00C3F21C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9794A02C24D84CAB00C3F21C /* Assets.xcassets */; };
 		9794A03024D84CAB00C3F21C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9794A02E24D84CAB00C3F21C /* LaunchScreen.storyboard */; };
@@ -22,7 +24,7 @@
 		9794EE6724DA11B9008E0EBF /* AccessTokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794EE6624DA11B9008E0EBF /* AccessTokenData.swift */; };
 		9794EE6B24DA139F008E0EBF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794EE6A24DA139F008E0EBF /* UserData.swift */; };
 		9794EE6D24DA13A9008E0EBF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794EE6C24DA13A9008E0EBF /* UserModel.swift */; };
-		97A3CD7D24DBA94C00E8B2AE /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A3CD7C24DBA94C00E8B2AE /* ViewController2.swift */; };
+		97A3CD7D24DBA94C00E8B2AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A3CD7C24DBA94C00E8B2AE /* HomeViewController.swift */; };
 		97C5135024DA5D1E00DAB381 /* RedditManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C5134F24DA5D1E00DAB381 /* RedditManager.swift */; };
 		97EFA66224E0CB01001672FF /* env.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97EFA66124E0CB01001672FF /* env.plist */; };
 /* End PBXBuildFile section */
@@ -34,10 +36,12 @@
 		9736087F24D89D4B006FAE86 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		976D87DA24E0B4CC009A8F6A /* SharedMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedMethods.swift; sourceTree = "<group>"; };
 		976D87DE24E0C242009A8F6A /* env demo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "env demo.plist"; sourceTree = "<group>"; };
+		9778091A24EC671D000B3A94 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		9778091C24EC6A2E000B3A94 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		9794A02024D84CAA00C3F21C /* dev for reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dev for reddit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9794A02324D84CAA00C3F21C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9794A02524D84CAA00C3F21C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9794A02724D84CAA00C3F21C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9794A02724D84CAA00C3F21C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9794A02A24D84CAA00C3F21C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9794A02C24D84CAB00C3F21C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9794A02F24D84CAB00C3F21C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,7 +51,7 @@
 		9794EE6624DA11B9008E0EBF /* AccessTokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenData.swift; sourceTree = "<group>"; };
 		9794EE6A24DA139F008E0EBF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		9794EE6C24DA13A9008E0EBF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		97A3CD7C24DBA94C00E8B2AE /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		97A3CD7C24DBA94C00E8B2AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		97BD435324D9EBEC002B2299 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		97C5134F24DA5D1E00DAB381 /* RedditManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditManager.swift; sourceTree = "<group>"; };
 		97EFA66124E0CB01001672FF /* env.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = env.plist; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				9794EE6624DA11B9008E0EBF /* AccessTokenData.swift */,
 				9794EE6A24DA139F008E0EBF /* UserData.swift */,
 				9794EE6C24DA13A9008E0EBF /* UserModel.swift */,
+				9778091A24EC671D000B3A94 /* PostData.swift */,
+				9778091C24EC6A2E000B3A94 /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,8 +133,8 @@
 		9794EE5F24D9EF44008E0EBF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9794A02724D84CAA00C3F21C /* ViewController.swift */,
-				97A3CD7C24DBA94C00E8B2AE /* ViewController2.swift */,
+				9794A02724D84CAA00C3F21C /* LoginViewController.swift */,
+				97A3CD7C24DBA94C00E8B2AE /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,11 +284,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				976D87DB24E0B4CC009A8F6A /* SharedMethods.swift in Sources */,
+				9778091B24EC671D000B3A94 /* PostData.swift in Sources */,
 				9794EE6524D9F0CE008E0EBF /* Constants.swift in Sources */,
 				97C5135024DA5D1E00DAB381 /* RedditManager.swift in Sources */,
 				9794EE6D24DA13A9008E0EBF /* UserModel.swift in Sources */,
-				97A3CD7D24DBA94C00E8B2AE /* ViewController2.swift in Sources */,
-				9794A02824D84CAA00C3F21C /* ViewController.swift in Sources */,
+				9778091D24EC6A2E000B3A94 /* PostModel.swift in Sources */,
+				97A3CD7D24DBA94C00E8B2AE /* HomeViewController.swift in Sources */,
+				9794A02824D84CAA00C3F21C /* LoginViewController.swift in Sources */,
 				9794EE6B24DA139F008E0EBF /* UserData.swift in Sources */,
 				9794EE6224D9EFD2008E0EBF /* OAuthManager.swift in Sources */,
 				9794A02424D84CAA00C3F21C /* AppDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ViewController2.swift
+//  HomeViewController.swift
 //  dev for reddit
 //
 //  Created by Noel Espino Córdova on 05/08/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController2: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var tokenTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -29,7 +29,7 @@ class ViewController2: UIViewController {
 
 // MARK: - OAuthManagerDelegate
 
-extension ViewController2: OAuthManagerDelegate {
+extension HomeViewController: OAuthManagerDelegate {
 
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         oauthManager.closeSession()
@@ -37,6 +37,7 @@ extension ViewController2: OAuthManagerDelegate {
 
     func didReciveToken(_ oauthManager: OAuthManager) {
         redditManager.me()
+        redditManager.getHotPost(from: "redditdev")
     }
 
     func didRemoveToken(_ oauthManager: OAuthManager) {
@@ -58,9 +59,9 @@ extension ViewController2: OAuthManagerDelegate {
 
 // MARK: - RedditManagerDelegate
 
-extension ViewController2: RedditManagerDelegate {
+extension HomeViewController: RedditManagerDelegate {
 
-    func didUpdateUser(_ redditManager: RedditManager, user: UserModel) {
+    func didRecieveUser(_ redditManager: RedditManager, user: UserModel) {
         DispatchQueue.main.async {
             self.title = user.name
             self.tokenTextField.text = UserDefaults.standard.string(forKey: K.UD_TOKEN)!
@@ -68,6 +69,12 @@ extension ViewController2: RedditManagerDelegate {
             let url = URL(string: user.icon_img)
             let data = try? Data(contentsOf: url!)
             self.profileImageView.image = UIImage(data: data!)
+        }
+    }
+
+    func didRecievePosts(_ redditManager: RedditManager, posts: [PostModel]) {
+        for post in posts {
+            print(post.title)
         }
     }
 
