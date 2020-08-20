@@ -11,16 +11,21 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tokenTextField: UITextField!
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var postTableView: UITableView!
 
     var oauthManager = OAuthManager()
     var redditManager = RedditManager()
+
+    var posts: [PostModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         oauthManager.delegate = self
         redditManager.delegate = self
+        postTableView.dataSource = self
+
+        postTableView.register(UINib(nibName: K.postCell, bundle: nil), forCellReuseIdentifier: K.postCellIdentifier)
 
         oauthManager.validateToken()
     }
@@ -66,20 +71,40 @@ extension HomeViewController: RedditManagerDelegate {
             self.title = user.name
             self.tokenTextField.text = UserDefaults.standard.string(forKey: K.UD_TOKEN)!
 
-            let url = URL(string: user.icon_img)
-            let data = try? Data(contentsOf: url!)
-            self.profileImageView.image = UIImage(data: data!)
+//            let url = URL(string: user.icon_img)
+//            let data = try? Data(contentsOf: url!)
+//            self.profileImageBarButtonItem.image = UIImage(data: data!)
         }
     }
 
     func didRecievePosts(_ redditManager: RedditManager, posts: [PostModel]) {
-        for post in posts {
-            print(post.title)
+        DispatchQueue.main.async {
+            self.posts.append(contentsOf: posts)
+            self.postTableView.reloadData()
         }
     }
 
     func didRedditFailWithError(_ error: Error) {
         print("Reddit: \(error)")
+    }
+
+}
+
+// MARK: - UITableViewDataSource
+
+extension HomeViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // swiftlint:disable:next force_cast
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.postCellIdentifier, for: indexPath) as! PostCell
+        cell.subredditLabel.text = posts[indexPath.row].prefixedSubreddit
+        cell.postLabel.text = posts[indexPath.row].title
+
+        return cell
     }
 
 }

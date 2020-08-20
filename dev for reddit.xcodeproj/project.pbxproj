@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		36CC398B344E3B983BEA5FE7 /* Pods_dev_for_reddit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE98243194335600D7AFD8B /* Pods_dev_for_reddit.framework */; };
+		9708064B24EEFE0A006BEED2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9708064924EEFE0A006BEED2 /* PostCell.swift */; };
+		9708064C24EEFE0A006BEED2 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9708064A24EEFE0A006BEED2 /* PostCell.xib */; };
 		9736088024D89D4B006FAE86 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736087F24D89D4B006FAE86 /* WebKit.framework */; };
 		976D87DB24E0B4CC009A8F6A /* SharedMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976D87DA24E0B4CC009A8F6A /* SharedMethods.swift */; };
 		976D87DF24E0C242009A8F6A /* env demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 976D87DE24E0C242009A8F6A /* env demo.plist */; };
@@ -33,6 +35,8 @@
 		2CA7312ED4B05B2A07287751 /* Pods-dev for reddit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev for reddit.release.xcconfig"; path = "Target Support Files/Pods-dev for reddit/Pods-dev for reddit.release.xcconfig"; sourceTree = "<group>"; };
 		3CE98243194335600D7AFD8B /* Pods_dev_for_reddit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dev_for_reddit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B42456C4D7B189F8C9C695F /* Pods-dev for reddit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev for reddit.debug.xcconfig"; path = "Target Support Files/Pods-dev for reddit/Pods-dev for reddit.debug.xcconfig"; sourceTree = "<group>"; };
+		9708064924EEFE0A006BEED2 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		9708064A24EEFE0A006BEED2 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		9736087F24D89D4B006FAE86 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		976D87DA24E0B4CC009A8F6A /* SharedMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedMethods.swift; sourceTree = "<group>"; };
 		976D87DE24E0C242009A8F6A /* env demo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "env demo.plist"; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				9794A02924D84CAA00C3F21C /* Main.storyboard */,
+				9708064924EEFE0A006BEED2 /* PostCell.swift */,
+				9708064A24EEFE0A006BEED2 /* PostCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9794A03024D84CAB00C3F21C /* LaunchScreen.storyboard in Resources */,
+				9708064C24EEFE0A006BEED2 /* PostCell.xib in Resources */,
 				9794A02D24D84CAB00C3F21C /* Assets.xcassets in Resources */,
 				9794A02B24D84CAA00C3F21C /* Main.storyboard in Resources */,
 				97EFA66224E0CB01001672FF /* env.plist in Resources */,
@@ -290,6 +297,7 @@
 				9794EE6D24DA13A9008E0EBF /* UserModel.swift in Sources */,
 				9778091D24EC6A2E000B3A94 /* PostModel.swift in Sources */,
 				97A3CD7D24DBA94C00E8B2AE /* HomeViewController.swift in Sources */,
+				9708064B24EEFE0A006BEED2 /* PostCell.swift in Sources */,
 				9794A02824D84CAA00C3F21C /* LoginViewController.swift in Sources */,
 				9794EE6B24DA139F008E0EBF /* UserData.swift in Sources */,
 				9794EE6224D9EFD2008E0EBF /* OAuthManager.swift in Sources */,

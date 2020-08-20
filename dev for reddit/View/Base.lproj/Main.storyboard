@@ -44,24 +44,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QTa-aH-QWa">
-                                <rect key="frame" x="82" y="243" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="bHh-tl-fjw"/>
-                                    <constraint firstAttribute="width" constant="250" id="sA0-DV-uaz"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOKEN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enI-HM-48o">
                                 <rect key="frame" x="183.66666666666666" y="63.999999999999993" width="47" height="18.666666666666664"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tJH-05-7ah">
+                                <rect key="frame" x="0.0" y="102.66666666666669" width="414" height="633.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="enI-HM-48o" firstAttribute="top" secondItem="gYF-O4-ZmF" secondAttribute="top" constant="20" id="0nZ-hz-S8n"/>
-                            <constraint firstItem="QTa-aH-QWa" firstAttribute="centerX" secondItem="e8b-yB-AET" secondAttribute="centerX" id="gxk-zj-A7s"/>
-                            <constraint firstItem="QTa-aH-QWa" firstAttribute="centerY" secondItem="e8b-yB-AET" secondAttribute="centerY" id="i2I-4j-jRp"/>
+                            <constraint firstItem="tJH-05-7ah" firstAttribute="leading" secondItem="gYF-O4-ZmF" secondAttribute="leading" id="C00-JE-GIY"/>
+                            <constraint firstItem="gYF-O4-ZmF" firstAttribute="trailing" secondItem="tJH-05-7ah" secondAttribute="trailing" id="CBj-Yr-3hp"/>
+                            <constraint firstItem="tJH-05-7ah" firstAttribute="top" secondItem="enI-HM-48o" secondAttribute="bottom" constant="20" id="PJM-cC-S0F"/>
+                            <constraint firstItem="gYF-O4-ZmF" firstAttribute="bottom" secondItem="tJH-05-7ah" secondAttribute="bottom" id="Wd6-fA-hhb"/>
                             <constraint firstItem="enI-HM-48o" firstAttribute="centerX" secondItem="e8b-yB-AET" secondAttribute="centerX" id="rcm-gM-HRP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gYF-O4-ZmF"/>
@@ -74,7 +73,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="profileImageView" destination="QTa-aH-QWa" id="3zs-ul-orN"/>
+                        <outlet property="postTableView" destination="tJH-05-7ah" id="P9X-jp-eto"/>
                         <outlet property="tokenTextField" destination="enI-HM-48o" id="Kuo-GO-hbK"/>
                     </connections>
                 </viewController>

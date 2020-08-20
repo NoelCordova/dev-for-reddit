@@ -91,9 +91,10 @@ struct RedditManager {
 
                     for postChildren in decodedData.data.children {
                         let subreddit = postChildren.data.subreddit
+                        let prefixedSubreddit = postChildren.data.subreddit_name_prefixed
                         let title = postChildren.data.title
 
-                        let post = PostModel(subreddit: subreddit, title: title)
+                        let post = PostModel(subreddit: subreddit, prefixedSubreddit: prefixedSubreddit, title: title)
 
                         posts.append(post)
                     }

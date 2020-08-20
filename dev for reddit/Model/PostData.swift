@@ -6,6 +6,8 @@
 //  Copyright © 2020 slingercode. All rights reserved.
 //
 
+// swiftlint:disable identifier_name
+
 import Foundation
 
 struct PostData: Codable {
@@ -29,6 +31,7 @@ struct PostChildren: Codable {
 struct PostChildrenData: Codable {
 
     let subreddit: String
+    let subreddit_name_prefixed: String
     let title: String
 
 }

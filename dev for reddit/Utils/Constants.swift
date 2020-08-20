@@ -33,4 +33,10 @@ struct K {
     static let UD_TOKEN_DATE = "TOKEN_DATE"
     static let UD_URL_STATE = "URL_STATE"
 
+    // Identifiers
+    static let postCellIdentifier = "PostCell"
+
+    // Files
+    static let postCell = "PostCell"
+
 }

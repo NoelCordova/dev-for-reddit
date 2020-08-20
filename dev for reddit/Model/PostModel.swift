@@ -11,6 +11,7 @@ import Foundation
 struct PostModel {
 
     let subreddit: String
+    let prefixedSubreddit: String
     let title: String
 
 }
