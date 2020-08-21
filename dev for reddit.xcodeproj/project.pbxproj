@@ -15,6 +15,7 @@
 		976D87DF24E0C242009A8F6A /* env demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 976D87DE24E0C242009A8F6A /* env demo.plist */; };
 		9778091B24EC671D000B3A94 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778091A24EC671D000B3A94 /* PostData.swift */; };
 		9778091D24EC6A2E000B3A94 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9778091C24EC6A2E000B3A94 /* PostModel.swift */; };
+		9786C15824EF452A007AB76B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786C15724EF452A007AB76B /* ProfileViewController.swift */; };
 		9794A02424D84CAA00C3F21C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794A02324D84CAA00C3F21C /* AppDelegate.swift */; };
 		9794A02624D84CAA00C3F21C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794A02524D84CAA00C3F21C /* SceneDelegate.swift */; };
 		9794A02824D84CAA00C3F21C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794A02724D84CAA00C3F21C /* LoginViewController.swift */; };
@@ -42,6 +43,7 @@
 		976D87DE24E0C242009A8F6A /* env demo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "env demo.plist"; sourceTree = "<group>"; };
 		9778091A24EC671D000B3A94 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		9778091C24EC6A2E000B3A94 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		9786C15724EF452A007AB76B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9794A02024D84CAA00C3F21C /* dev for reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dev for reddit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9794A02324D84CAA00C3F21C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9794A02524D84CAA00C3F21C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				9794A02724D84CAA00C3F21C /* LoginViewController.swift */,
 				97A3CD7C24DBA94C00E8B2AE /* HomeViewController.swift */,
+				9786C15724EF452A007AB76B /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				9794EE6B24DA139F008E0EBF /* UserData.swift in Sources */,
 				9794EE6224D9EFD2008E0EBF /* OAuthManager.swift in Sources */,
 				9794A02424D84CAA00C3F21C /* AppDelegate.swift in Sources */,
+				9786C15824EF452A007AB76B /* ProfileViewController.swift in Sources */,
 				9794A02624D84CAA00C3F21C /* SceneDelegate.swift in Sources */,
 				9794EE6724DA11B9008E0EBF /* AccessTokenData.swift in Sources */,
 			);

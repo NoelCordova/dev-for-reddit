@@ -34,6 +34,8 @@ struct K {
     static let UD_URL_STATE = "URL_STATE"
 
     // Identifiers
+    static let loginNavControllerIdentifier = "LoginNavController"
+    static let mainNavControllerIdentifier = "MainNavController"
     static let postCellIdentifier = "PostCell"
 
     // Files

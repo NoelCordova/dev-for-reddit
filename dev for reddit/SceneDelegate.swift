@@ -25,10 +25,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
         if UserDefaults.standard.string(forKey: K.UD_TOKEN) != nil {
-            let mainNavController = storyboard.instantiateViewController(identifier: "MainNavController")
+            let mainNavController = storyboard.instantiateViewController(identifier: K.mainNavControllerIdentifier)
             window?.rootViewController = mainNavController
         } else {
-            let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavController")
+            let loginNavController = storyboard.instantiateViewController(identifier: K.loginNavControllerIdentifier)
             window?.rootViewController = loginNavController
         }
     }

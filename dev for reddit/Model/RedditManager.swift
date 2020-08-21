@@ -11,13 +11,17 @@
 import Foundation
 
 protocol RedditManagerDelegate: class {
-
     func didRecieveUser(_ redditManager: RedditManager, user: UserModel)
 
     func didRecievePosts(_ redditManager: RedditManager, posts: [PostModel])
 
     func didRedditFailWithError(_ error: Error)
+}
 
+extension RedditManagerDelegate {
+    func didRecieveUser(_ redditManager: RedditManager, user: UserModel) { }
+
+    func didRecievePosts(_ redditManager: RedditManager, posts: [PostModel]) { }
 }
 
 struct RedditManager {

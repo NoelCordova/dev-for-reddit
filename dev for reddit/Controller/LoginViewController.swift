@@ -52,7 +52,7 @@ extension LoginViewController: OAuthManagerDelegate {
     func didReciveToken(_ oauthManager: OAuthManager) {
         DispatchQueue.main.async {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainNavController = storyboard.instantiateViewController(identifier: "MainNavController")
+            let mainNavController = storyboard.instantiateViewController(identifier: K.mainNavControllerIdentifier)
 
             // This is to get the SceneDelegate custom changeRootViewController method
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?

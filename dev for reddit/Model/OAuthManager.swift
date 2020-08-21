@@ -11,13 +11,11 @@
 import Foundation
 
 protocol OAuthManagerDelegate: class {
-
     func didReciveToken(_ oauthManager: OAuthManager)
 
     func didRemoveToken(_ oauthManager: OAuthManager)
 
     func didOAuthFailWithError(_ error: Error)
-
 }
 
 extension OAuthManagerDelegate {
